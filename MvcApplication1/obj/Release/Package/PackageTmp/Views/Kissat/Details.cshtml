@@ -1,0 +1,29 @@
+﻿@model MvcApplication1.Models.Kissa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Kissa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nimi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nimi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ika)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ika)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
