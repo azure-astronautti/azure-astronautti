@@ -262,6 +262,8 @@
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\aztronautti - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\aztronautti - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\kissakanta - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\kissakanta - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
