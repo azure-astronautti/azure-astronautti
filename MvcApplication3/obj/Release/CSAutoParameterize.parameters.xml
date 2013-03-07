@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BookDBContext-Web.config Connection String" description="BookDBContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Books.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Lassi\\Documents\\Visual\ Studio\ 2012\\Projects\\MvcApplication3\\MvcApplication3\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-MvcApplication3-20130305150629;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-MvcApplication3-20130305150629.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Lassi\\Documents\\Visual\ Studio\ 2012\\Projects\\MvcApplication3\\MvcApplication3\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="BookDBContext_DatabasePublish-Web.config Connection String" description="BookDBContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="BookDBContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Lassi\\Documents\\Visual\ Studio\ 2012\\Projects\\MvcApplication3\\MvcApplication3\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookDBContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

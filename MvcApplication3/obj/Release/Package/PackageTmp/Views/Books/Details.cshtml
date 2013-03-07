@@ -1,0 +1,50 @@
+﻿@model MvcApplication3.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Book</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Writer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Writer)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PublishDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PublishDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Genre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Genre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
