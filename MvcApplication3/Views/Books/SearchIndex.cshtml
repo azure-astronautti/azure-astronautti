@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<MvcApplication3.Models.Book>
 
 @{
-    ViewBag.Title = "SearchIndex";
+    ViewBag.Title = "Search";
 }
 
-<h2>SearchIndex</h2>
+<h2>Search</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
     @using (Html.BeginForm("SearchIndex", "Books", FormMethod.Get))
     {    
         <p>

@@ -98,6 +98,10 @@ h5, h6 {
     max-width: 960px;
 }
 
+    .display-label {
+        font-weight: bold;
+    }
+
 #body {
     background-color: #efeeef;
     clear: both;
