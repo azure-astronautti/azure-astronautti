@@ -207,6 +207,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -269,7 +270,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\aztrobooks - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\aztrobooks - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\aztrobooks - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\aztrobooks - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\testaztro - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\testaztro - Web Deploy.pubxml" />
