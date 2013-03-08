@@ -5,10 +5,16 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using MvcApplication3.Models;
+using DotNetOpenAuth.AspNet;
+using Microsoft.Web.WebPages.OAuth;
+using MvcApplication3.Filters;
 
 namespace MvcApplication3.Controllers
 {
+    [Authorize]
+    [InitializeSimpleMembership]
     public class BooksController : Controller
     {
         private BookDBContext db = new BookDBContext();
@@ -16,6 +22,7 @@ namespace MvcApplication3.Controllers
         //
         // GET: /Books/
 
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Books.ToList());
@@ -24,6 +31,7 @@ namespace MvcApplication3.Controllers
         //
         // GET: /Books/Details/5
 
+        [AllowAnonymous]
         public ActionResult Details(int id = 0)
         {
             Book book = db.Books.Find(id);
@@ -114,6 +122,7 @@ namespace MvcApplication3.Controllers
             return RedirectToAction("Index");
         }
 
+        [AllowAnonymous]
         public ActionResult SearchIndex(string bookGenre, string searchString)
         {
             var GenreLst = new List<string>();
