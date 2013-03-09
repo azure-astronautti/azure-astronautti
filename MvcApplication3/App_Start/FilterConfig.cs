@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using MvcApplication3.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MvcApplication3
@@ -8,6 +9,7 @@ namespace MvcApplication3
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new InitializeSimpleMembershipAttribute());
         }
     }
 }

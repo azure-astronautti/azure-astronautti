@@ -5,54 +5,48 @@ namespace MvcApplication3.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Web.Security;
+    using WebMatrix.WebData;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MvcApplication3.Models.BookDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MvcApplication3.Models.UsersContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(MvcApplication3.Models.BookDBContext context)
+
+        protected override void Seed(MvcApplication3.Models.UsersContext context)
         {
-            context.Books.AddOrUpdate(i => i.Title,
-                new Book
-                {
-                    Title = "Catch-22",
-                    Writer = "Joseph Heller",
-                    PublishDate = DateTime.Parse("1962-11-11"),
-                    Genre = "Satirical War",
-                    Price = 7.99M
-                },
+            WebSecurity.InitializeDatabaseConnection(
+	                "DefaultConnection",
+	                "UserProfile",
+	                "UserId",
+	                "UserName", autoCreateTables: true);
+	 
+	            if (!Roles.RoleExists("Administrator"))
+	                Roles.CreateRole("Administrator");
+	 
+	            if (!WebSecurity.UserExists("admin"))
+	                WebSecurity.CreateUserAndAccount(
+	                    "admin",
+	                    "admin");
+	 
+	            if (!Roles.GetRolesForUser("admin").Contains("Administrator"))
+	                Roles.AddUsersToRoles(new[] {"admin"}, new[] {"Administrator"});
 
-                 new Book
-                 {
-                     Title = "The Sense Of An Ending",
-                     Writer = "Julian Barnes",
-                     PublishDate = DateTime.Parse("2011-1-11"),
-                     Genre = "Modern Literature",
-                     Price = 8.99M
-                 },
+            //  This method will be called after migrating to the latest version.
 
-                 new Book
-                 {
-                     Title = "Flow",
-                     Writer = "Mihaly Csikszentmihalyi",
-                     PublishDate = DateTime.Parse("1972-2-23"),
-                     Genre = "Non-Fiction",
-                     Price = 9.99M
-                 },
-
-               new Book
-               {
-                   Title = "Kaiken käsikirja",
-                   Writer = "Esko Valtaoja",
-                   PublishDate = DateTime.Parse("2012-12-1"),
-                   Genre = "Non-Fiction",
-                   Price = 3.99M
-               }
-           );
-
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }
