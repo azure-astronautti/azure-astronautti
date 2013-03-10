@@ -30,6 +30,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Genre)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReadBy)
+        </th>
         <th></th>
     </tr>
 
@@ -49,7 +52,10 @@
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.DisplayFor(modelItem => item.ReadBy)
+            </td>
+            <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
             @Html.ActionLink("Details", "Details", new { id = item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ID })
             </td>

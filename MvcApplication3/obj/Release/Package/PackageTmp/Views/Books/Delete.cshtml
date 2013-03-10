@@ -31,6 +31,13 @@
         @Html.DisplayFor(model => model.Genre)
     </div>
 
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReadBy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReadBy)
+    </div>
+
 </fieldset>
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()

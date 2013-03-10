@@ -17,6 +17,8 @@ namespace MvcApplication3.Models
         [DataType(DataType.Date)]
         public DateTime PublishDate { get; set; }
         public string Genre { get; set; }
+        public Boolean Approved { get; set; }
+        public DateTime ReadBy { get; set; }
     }
 
     public class BookDBContext : DbContext

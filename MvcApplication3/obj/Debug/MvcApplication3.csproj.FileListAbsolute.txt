@@ -355,3 +355,4 @@ C:\Users\Lassi\Documents\Visual Studio 2012\Projects\aztro\azure-astronautti\Mvc
 C:\Users\Lassi\Documents\Visual Studio 2012\Projects\aztro\azure-astronautti\MvcApplication3\obj\Debug\MvcApplication3.dll
 C:\Users\Lassi\Documents\Visual Studio 2012\Projects\aztro\azure-astronautti\MvcApplication3\obj\Debug\MvcApplication3.pdb
 C:\Users\Lassi\Documents\Visual Studio 2012\Projects\aztro\azure-astronautti\MvcApplication3\obj\Debug\MvcApplication3.Migrations.RemovePrice.resources
+C:\Users\Lassi\Documents\Visual Studio 2012\Projects\aztro\azure-astronautti\MvcApplication3\obj\Debug\MvcApplication3.Migrations.ReadByAndApproved.resources

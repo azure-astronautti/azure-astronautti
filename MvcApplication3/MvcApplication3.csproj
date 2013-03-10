@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201303100002339_RemovePrice.Designer.cs">
       <DependentUpon>201303100002339_RemovePrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201303101002156_ReadByAndApproved.cs" />
+    <Compile Include="Migrations\201303101002156_ReadByAndApproved.Designer.cs">
+      <DependentUpon>201303101002156_ReadByAndApproved.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -365,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201303100002339_RemovePrice.resx">
       <DependentUpon>201303100002339_RemovePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201303101002156_ReadByAndApproved.resx">
+      <DependentUpon>201303101002156_ReadByAndApproved.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

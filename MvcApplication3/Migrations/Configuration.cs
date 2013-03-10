@@ -22,6 +22,8 @@ namespace MvcApplication3.Migrations
                     Writer = "Joseph Heller",
                     PublishDate = DateTime.Parse("1962-11-11"),
                     Genre = "Satirical War",
+                    ReadBy = DateTime.Parse("2013-3-20"),
+                    Approved = true
                 },
 
                  new Book
@@ -30,6 +32,8 @@ namespace MvcApplication3.Migrations
                      Writer = "Julian Barnes",
                      PublishDate = DateTime.Parse("2011-1-11"),
                      Genre = "Modern Literature",
+                     ReadBy = DateTime.Parse("2013-3-27"),
+                     Approved = true
                  },
 
                  new Book
@@ -38,6 +42,8 @@ namespace MvcApplication3.Migrations
                      Writer = "Mihaly Csikszentmihalyi",
                      PublishDate = DateTime.Parse("1972-2-23"),
                      Genre = "Non-Fiction",
+                     ReadBy = DateTime.Parse("2013-3-13"),
+                     Approved = true
                  },
 
                new Book
@@ -46,6 +52,8 @@ namespace MvcApplication3.Migrations
                    Writer = "Esko Valtaoja",
                    PublishDate = DateTime.Parse("2012-12-1"),
                    Genre = "Non-Fiction",
+                   ReadBy = DateTime.Parse("2013-4-3"),
+                   Approved = true
                }
            );
 
