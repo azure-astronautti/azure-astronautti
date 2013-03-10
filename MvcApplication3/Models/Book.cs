@@ -17,9 +17,6 @@ namespace MvcApplication3.Models
         [DataType(DataType.Date)]
         public DateTime PublishDate { get; set; }
         public string Genre { get; set; }
-        [Range(1, 100)]
-        [DataType(DataType.Currency)]
-        public decimal Price { get; set; }
     }
 
     public class BookDBContext : DbContext

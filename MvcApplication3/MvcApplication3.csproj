@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201303051524509_AddDataAnnotationsMig.Designer.cs">
       <DependentUpon>201303051524509_AddDataAnnotationsMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201303100002339_RemovePrice.cs" />
+    <Compile Include="Migrations\201303100002339_RemovePrice.Designer.cs">
+      <DependentUpon>201303100002339_RemovePrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -358,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201303051524509_AddDataAnnotationsMig.resx">
       <DependentUpon>201303051524509_AddDataAnnotationsMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201303100002339_RemovePrice.resx">
+      <DependentUpon>201303100002339_RemovePrice.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
