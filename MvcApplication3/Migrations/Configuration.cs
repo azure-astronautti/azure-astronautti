@@ -43,7 +43,7 @@ namespace MvcApplication3.Migrations
                      PublishDate = DateTime.Parse("1972-2-23"),
                      Genre = "Non-Fiction",
                      ReadBy = DateTime.Parse("2013-3-13"),
-                     Approved = true
+                     Approved = false
                  },
 
                new Book

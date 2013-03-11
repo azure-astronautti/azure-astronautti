@@ -37,6 +37,12 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.ReadBy)
     </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Approved)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Approved)
+    </div>
 
 </fieldset>
 @using (Html.BeginForm()) {

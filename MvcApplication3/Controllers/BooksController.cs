@@ -25,7 +25,11 @@ namespace MvcApplication3.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View(db.Books.ToList());
+            var books = from m in db.Books
+                        select m;
+            books = books.OrderBy(s => s.ReadBy);
+            books = books.Where(s => s.ReadBy.CompareTo(DateTime.Now)==1);
+            return View(books);
         }
 
         //
@@ -135,10 +139,12 @@ namespace MvcApplication3.Controllers
 
             var books = from m in db.Books
                          select m;
+            books = books.OrderByDescending(s => s.Approved);
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 books = books.Where(s => s.Title.Contains(searchString));
+                
             }
 
             if (string.IsNullOrEmpty(bookGenre))

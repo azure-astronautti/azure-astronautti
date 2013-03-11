@@ -15,9 +15,12 @@ namespace MvcApplication3.Models
         [Required]
         public string Writer { get; set; }
         [DataType(DataType.Date)]
+        [Display(Name = "Publication Date ")]
         public DateTime PublishDate { get; set; }
         public string Genre { get; set; }
         public Boolean Approved { get; set; }
+        [DataType(DataType.Date)]
+        [Display(Name = "Read By")]
         public DateTime ReadBy { get; set; }
     }
 
