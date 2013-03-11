@@ -55,8 +55,10 @@
             @Html.DisplayFor(modelItem => item.ReadBy)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID })
+            @if(Roles.IsUserInRole("admin")){
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID })
+            }
         </td>
     </tr>
     }

@@ -35,7 +35,7 @@ namespace MvcApplication3.Controllers
         //
         // GET: /Books/Details/5
 
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public ActionResult Details(int id = 0)
         {
             Book book = db.Books.Find(id);
@@ -74,6 +74,7 @@ namespace MvcApplication3.Controllers
         //
         // GET: /Books/Edit/5
 
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int id = 0)
         {
             Book book = db.Books.Find(id);
@@ -103,6 +104,7 @@ namespace MvcApplication3.Controllers
         //
         // GET: /Books/Delete/5
 
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int id = 0)
         {
             Book book = db.Books.Find(id);
